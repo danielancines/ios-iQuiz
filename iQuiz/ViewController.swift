@@ -11,9 +11,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.configureLayout()
     }
 
-
+    @IBAction func pressedButton(_ sender: Any) {
+        print("O Botão foi pressionado")
+    }
+    
+    @IBOutlet weak var initializeQuizButton: UIButton!
+    
+    func configureLayout(){
+        initializeQuizButton.layer.cornerRadius = 12.0
+        navigationItem.hidesBackButton = true
+    }
 }
 
